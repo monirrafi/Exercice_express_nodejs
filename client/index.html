@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pour Examen 3</title>
+    <!-- NE JAMAIS OUBLIER D'INCLURE LES FICHIERS NÉCESSAIRE -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/user.js"></script>
+    <script src="js/films.js"></script>
+    <script src="js/javascript.js"></script>
+</head>
+<body  class="bgindex" onLoad="chargerListesDeroulantes(); ">
+    <navbar >
+        <div class="bgnavbar">
+        <a href=""><img src="images/logo2.png" alt="" class="imglogo">   </a>
+        <button onClick="lister('A','');" type="submit">Lister produits</button>
+        <label for="selDirector">Realisateur</label>
+        <select id="selDirectors" onChange="listerCommandesSelonDirector();"></select>
+        <label for="selRatios">Ratio</label>
+        <select id="selRatios" onChange="listerFilmsSelonRatio();"></select>
+        <label for="selDurees">Duree</label>
+        <select id="selDurees" onChange="listerFilmsSelonDuree();"></select>
+        <label for="selTotal">Total</label>
+        <select id="selTotal" onChange="calculerTotal();"> 
+            <option>Tous</option>
+            <option>N/A</option>
+            <option>Plus que 50</option>
+            <option>Moins que 50</option>
+        </select>
+        </div>
+    </navbar>
+    
+    <br/><br/>
+    <div id="contenu"></div>
+</body>
+</html>
